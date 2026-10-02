@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hareem's Crazy Birthday 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Pacifico&display=swap');
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:'DM Sans',sans-serif}
+body{overflow-x:hidden;color:#fff;background:linear-gradient(135deg,#160b20,#35132c 50%,#11152c)}
+body.crazy{animation:bg .7s infinite alternate}
+@keyframes bg{from{background:hsl(300,35%,12%)}to{background:hsl(220,45%,15%)}}
+
+.screen{display:none;min-height:100vh;align-items:center;justify-content:center;padding:25px;position:relative;z-index:5}
+.screen.active{display:flex;animation:in .5s ease}
+.card{width:min(94vw,680px);padding:38px 25px;text-align:center;border:1px solid #ffffff30;
+background:#ffffff12;backdrop-filter:blur(16px);border-radius:32px;box-shadow:0 25px 80px #0007}
+h1,h2{font-family:Pacifico,cursive;font-weight:400;margin:12px 0}
+h1{font-size:clamp(48px,14vw,85px);color:#ffb7d3;text-shadow:0 0 25px #ff70a544}
+h2{font-size:clamp(32px,8vw,55px);color:#ffd2e3}
+p{font-size:17px;line-height:1.75;color:#f5e8ef}
+.eyebrow{font-size:10px;letter-spacing:4px;color:#ffadc9}
+.cake{font-size:65px;display:inline-block;animation:cake 1.3s ease-in-out infinite}
+@keyframes cake{50%{transform:translateY(-14px) rotate(5deg)}}
+.line{width:70px;height:3px;background:#ff8fb7;margin:18px auto 25px;border-radius:9px}
+button{border:0;border-radius:999px;padding:14px 21px;margin:7px 4px;background:#f0649b;color:white;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 25px #f0649b44;transition:.2s}
+button:hover{transform:scale(1.05)}
+.alt{background:#8569c2}.green{background:#5eaaa1}.gold{background:#c58a4b}
+
+.quote{padding:18px;border-radius:20px;background:#ffb0d40d;border:1px solid #ffb0d42d;margin:20px auto}
+.big{font-size:70px;margin:15px}
+.small{font-size:13px;color:#d9c8d1}
+
+.teddy,.cat,.duck,.star{position:fixed;z-index:3;pointer-events:none}
+.teddy{font-size:45px;bottom:8%;left:-80px}
+.t1{animation:run 7s linear infinite}.t2{animation:run 9s linear 2s infinite}.t3{animation:run 8s linear 4s infinite}
+@keyframes run{
+0%{left:-80px;transform:translateY(0) rotate(-8deg)}
+20%{transform:translateY(-28px) rotate(8deg)}
+40%{transform:translateY(0) rotate(-8deg)}
+60%{transform:translateY(-18px) rotate(7deg)}
+80%{transform:translateY(0) rotate(-5deg)}
+100%{left:110%;transform:translateY(-8px) rotate(8deg)}
+}
+.cat{font-size:42px;right:-70px;bottom:28%;animation:catrun 11s linear infinite}
+@keyframes catrun{0%{right:-70px;transform:scaleX(1)}45%{right:55%;transform:scaleX(1) translateY(-15px)}50%{right:55%;transform:scaleX(-1)}100%{right:110%;transform:scaleX(-1)}}
+.duck{font-size:40px;left:15%;bottom:-60px;animation:duck 5s ease-in-out infinite}
+@keyframes duck{0%,100%{bottom:-60px}50%{bottom:18%}}
+.star{font-size:25px;animation:twinkle 1.3s infinite alternate}
+.s1{top:15%;left:12%}.s2{top:25%;right:15%;animation-delay:.4s}.s3{bottom:22%;left:25%;animation-delay:.8s}.s4{top:8%;right:35%;animation-delay:.2s}
+@keyframes twinkle{to{transform:scale(1.7) rotate(30deg);opacity:.3}}
+
+.heart{position:fixed;bottom:-40px;z-index:4;pointer-events:none;font-size:25px;animation:heart 4s linear forwards}
+@keyframes heart{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+
+.confetti{position:fixed;z-index:10;top:-20px;font-size:20px;pointer-events:none;animation:fall 3s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.1}}
+
+.crazyMode .card{animation:wiggle .35s infinite}
+.crazyMode .cake{animation:chaos .25s infinite}
+.crazyMode button{animation:buttonJump .45s infinite alternate}
+.crazyMode .teddy,.crazyMode .cat{animation-duration:1.5s!important}
+@keyframes wiggle{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1deg)}}
+@keyframes chaos{50%{transform:rotate(18deg) scale(1.2) translateY(-15px)}}
+@keyframes buttonJump{to{transform:translateY(-8px) rotate(2deg)}}
+@keyframes in{from{opacity:0;transform:translateY(20px) scale(.98)}to{opacity:1;transform:none}}
+
+@media(max-width:500px){.card{padding:32px 18px}p{font-size:16px}.teddy{font-size:34px}.cat{font-size:34px}.duck{font-size:32px}}
+</style>
+</head>
+<body>
+
+<div class="teddy t1">🧸</div><div class="teddy t2">🧸</div><div class="teddy t3">🧸</div>
+<div class="cat">🐱</div><div class="duck">🦆</div>
+<div class="star s1">✨</div><div class="star s2">⭐</div><div class="star s3">✨</div><div class="star s4">💫</div>
+
+<section class="screen active" id="home">
+<div class="card">
+<div class="eyebrow">WARNING: TOO MUCH CUTENESS</div>
+<div class="cake">🎂</div>
+<h1>Hareem</h1>
+<div class="line"></div>
+<p>Happy Birthday to the girl who deserves a whole little universe of happiness. 💗</p>
+<p class="small">But first… I have a slightly crazy surprise for you.</p>
+<button onclick="go('story');party()">Enter the chaos ✨</button>
+</div>
+</section>
+
+<section class="screen" id="story">
+<div class="card">
+<div class="eyebrow">CHAPTER ONE</div>
+<h2>Okay… this got out of hand. 😂</h2>
+<p>There was supposed to be a normal birthday message here.</p>
+<p>Then the teddy bears showed up. The cat started running. A duck appeared for absolutely no reason.</p>
+<div class="big">🧸 🐱 🦆</div>
+<button onclick="go('message')">I still want the message 💌</button>
+<button class="alt" onclick="go('crazy')">Make it crazier 🤪</button>
+</div>
+</section>
+
+<section class="screen" id="message">
+<div class="card">
+<div class="eyebrow">A LITTLE MESSAGE</div>
+<h2>You’re actually pretty special 🤍</h2>
+<p>You're the kind of person who can turn a normal conversation into something worth remembering.</p>
+<div class="quote">“Some people make ordinary days feel a little brighter just by being themselves.” ✨</div>
+<p>So I hope today gives you a hundred little reasons to smile.</p>
+<button onclick="go('surprise')">There’s another surprise… 👀</button>
+</div>
+</section>
+
+<section class="screen" id="surprise">
+<div class="card">
+<div class="eyebrow">THE TEDDY BEAR DEPARTMENT</div>
+<h2>They have a message for you 🧸</h2>
+<div class="big">🧸💨 🧸💨 🧸💨</div>
+<p>“Happy Birthday Hareem! We were told to deliver happiness… so we brought ALL of it.”</p>
+<button class="gold" onclick="party()">Release the birthday chaos 🎉</button>
+<button onclick="go('wish')">Okay, what's next? 🎀</button>
+</div>
+</section>
+
+<section class="screen" id="crazy">
+<div class="card">
+<div class="eyebrow">YOU ASKED FOR CRAZY</div>
+<h2>BAD IDEA. I LOVE IT. 🤪</h2>
+<p>Press the button and watch absolutely everything lose its mind.</p>
+<div class="big">🧸 🐱 🦆 💗 ✨ 🎈</div>
+<button onclick="toggleCrazy()">ACTIVATE CRAZY MODE 🚨</button>
+<button class="green" onclick="party()">MORE CONFETTI!! 🎉</button>
+<button onclick="go('wish')">Escape the chaos →</button>
+</div>
+</section>
+
+<section class="screen" id="wish">
+<div class="card">
+<div class="eyebrow">THE LAST PAGE</div>
+<div class="cake">🎂</div>
+<h2>Happy Birthday, Hareem 🎀</h2>
+<p>May your dreams get closer, your worries get smaller, and your smile become a permanent feature of this year.</p>
+<p>And may there always be a little bit of craziness, laughter and magic waiting around the corner.</p>
+<h3 style="font-family:Pacifico;color:#ffb4d0">Keep smiling — it really suits you. 💗</h3>
+<button onclick="go('home')">↺ Start the madness again</button>
+</div>
+</section>
+
+<script>
+function go(id){
+ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ window.scrollTo(0,0);
+}
+function heart(){
+ const h=document.createElement('div');h.className='heart';
+ h.textContent=['💗','💖','💕','✨','🌸'][Math.floor(Math.random()*5)];
+ h.style.left=Math.random()*100+'vw';
+ h.style.animationDuration=(3+Math.random()*3)+'s';
+ document.body.appendChild(h);setTimeout(()=>h.remove(),6500);
+}
+setInterval(heart,700);
+
+function party(){
+ for(let i=0;i<45;i++){
+  setTimeout(()=>{
+   const c=document.createElement('div');c.className='confetti';
+   c.textContent=['🎉','🎊','💗','✨','🌸','⭐'][Math.floor(Math.random()*6)];
+   c.style.left=Math.random()*100+'vw';
+   c.style.animationDuration=(1.8+Math.random()*2.5)+'s';
+   document.body.appendChild(c);setTimeout(()=>c.remove(),4500);
+  },i*35);
+ }
+}
+function toggleCrazy(){
+ document.body.classList.toggle('crazyMode');
+ party();
+}
+</script>
+</body>
+</html>
